@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HackOverflowApp">
         <activity
+            android:name=".ResultActivity"
+            android:exported="true" />
+        <activity
+            android:name=".QuizQuestionsActivity"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
