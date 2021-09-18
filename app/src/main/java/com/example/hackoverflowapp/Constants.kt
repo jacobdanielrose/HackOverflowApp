@@ -40,7 +40,7 @@ object Constants {
 
         infohelpList.add(info2)
 
-        val info3 = InfoHelp(2,
+        val info3 = InfoHelp(3,
             "SQL Injection",
             R.drawable.ic_sql,
             "SQL Injection is one of the most common cyberattacks in the world. Although it is relatively simple " +
@@ -53,6 +53,38 @@ object Constants {
         )
 
         infohelpList.add(info3)
+
+        val info4 = InfoHelp(4,
+            "2 Factor Authentication",
+            R.drawable.ic_sql,
+            "2 Factor authentication would work in python by using the PyOTP library and a JS front end with a simple authentication app like " +
+                    "google authenticator or duo mobile. 2FA drastically reduces the ability of someone to hack an account by brute force " +
+                    "attacking the password or obtaining it in another data breach."
+        )
+
+        infohelpList.add(info4)
+
+        val info5 = InfoHelp(5,
+            "Proper Logging",
+            R.drawable.ic_sql,
+            "Another way to prevent data breaches, is by logging all log-ins, server queries, transfers, emails, etc. All of this can be " +
+                    "logged on both ends and then compared at the end of the day. If the logs do not match up on both ends, " +
+                    "it will be flagged as an unauthorized access, allowing you to lock out the given account and prevent further theft."
+        )
+
+        infohelpList.add(info5)
+
+        val info6 = InfoHelp(6,
+            "Proper Logging",
+            R.drawable.ic_sql,
+            "A simple way to deal with email phishing and malware related attacks is to utilize, again the third party email providers IT tools for disabling links on " +
+                    "all external emails preventing inadvertent execution of malware. Another interesting tool, would be to use machine learning (specifically a neural net) " +
+                    "to do language recognition for the sending emails address. Often times, malicious emails are sent from randomly generated addresses, " +
+                    "with a display name that mimics a known sender. A NN in python could be used to recognize real names and words in the email address " +
+                    "(info@gmail.com, or  paypal@mail.paypal.com vs jcjuap0jguhoja7-nqtuhieiidqtassc@mail.com see image below) to filter out potentially dangerous emails."
+        )
+
+        infohelpList.add(info6)
 
         return infohelpList
     }
@@ -95,6 +127,42 @@ object Constants {
         )
 
         questionsList.add(que3)
+
+        val que4 = Question(4,
+            "What is the advantage of utilizing multi-factor authetication?",
+            R.drawable.ic_2fa,
+            "Make logging in slower and more annoying",
+            "Eliminate unauthorized logins with your account info",
+            "Make logging in simpler",
+            "IT workers have nothing better to do",
+            2
+        )
+
+        questionsList.add(que4)
+
+        val que5 = Question(5,
+            "Why do we log/monitor all logins and server queries?",
+            R.drawable.ic_logging,
+            "We are nosy and want to know what you're doing",
+            "We enjoy wasting memory on cataloging",
+            "Allows us to confirm authorized access of sensitive data",
+            "All of the above",
+            3
+        )
+
+        questionsList.add(que5)
+
+        val que6 = Question(6,
+            "How do we discriminate real email accounts from malicious ones?",
+            R.drawable.ic_disable_links,
+            "Neural net language recognition of sending address",
+            "Flagging all emails from external accounts and disabling links ",
+            "This app educating you on simple steps to better cyber security practices!",
+            "All of the above",
+            4
+        )
+
+        questionsList.add(que6)
 
         return questionsList
     }
