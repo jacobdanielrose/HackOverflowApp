@@ -24,6 +24,7 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener{
 
         mUserName = intent.getStringExtra(Constants.USER_NAME)
         mCurrentPosition = intent.getIntExtra(Constants.CURRENT_QUESTION, 1)
+        mCorrectAnswers = intent.getIntExtra(Constants.CORRECT_ANSWERS,0)
 
         mQuestionsList = Constants.getQuestions()
         setQuestion()

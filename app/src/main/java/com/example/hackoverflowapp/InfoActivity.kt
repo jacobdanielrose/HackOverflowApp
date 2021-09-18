@@ -21,6 +21,7 @@ class InfoActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_info)
 
         mCurrentPosition = intent.getIntExtra(Constants.CURRENT_QUESTION, 0)
+        mCorrectAnswers = intent.getIntExtra(Constants.CORRECT_ANSWERS,0)
         mUserName = intent.getStringExtra(Constants.USER_NAME)
 
         mInfohelpList = Constants.getInfoHelp()

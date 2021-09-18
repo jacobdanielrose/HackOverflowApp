@@ -17,7 +17,12 @@ object Constants {
         R.drawable.ic_phishing,
         "Phishing attacks are emails or text messages that attempt to " +
                 "imitate a well-known and respected company in an attempt to extract sensitive " +
-                "information from you. e.g. banking info, credit card numbers"
+                "information from you. e.g. banking info, credit card numbers. In the example photo, they " +
+                "claimed to be amazon but the email was from accounts@mazon.com which was missing the first a. " +
+                "Many people might mistake the @ for an A and click on the link thinking it was legitimate, which is a common " +
+                "tactic. If one hovers over the link one sees that it actually links to a different website, which is common as well " +
+                "as these sites are typically mockups that look similar to the company being \"represented\" so that you feel " +
+                "comfortable entering your personal info."
         )
 
         infohelpList.add(info1)
@@ -27,8 +32,8 @@ object Constants {
             "Encryption",
             R.drawable.ic_pgp,
             "Encryption will not actually prevent a hacker from extracting " +
-                    "data traveling across a network, if they have managed to gain access " +
-                    "however, all the data that the hacker obtains will be encrypted and therefore " +
+                    "data traveling across a network, if they have managed to gain access. " +
+                    "However, all the data that the hacker obtains will be encrypted and therefore " +
                     "useless unless they also happens to have the private key used in the encryption. " +
                     "The data they obtain will just look a bunch of random junk like the message above."
         )
@@ -40,7 +45,11 @@ object Constants {
             R.drawable.ic_sql,
             "SQL Injection is one of the most common cyberattacks in the world. Although it is relatively simple " +
                     "to guard against, it is shockingly common how many big companies still manage to get hacked by this method. " +
-                    ""
+                    "There are many types but most of them boil down to entering malicious SQL code as a disguised as a normal query. " +
+                    "If proper measures are not taken, this can allow the hacker to run whatever SQL code they please and possibly retrieve any data " +
+                    "stored on the system. To prevent this one should parameterize queries, which allows one to predefine query types, minimizing the hackers ability " +
+                    "to run malicious code. Also making use of the principle of lease privilege (POLP), making sure that standard users accounts have only those " +
+                    "privileges necessary to do their tasks, and nothing more, which minimizes the hackers attack surface."
         )
 
         infohelpList.add(info3)
@@ -75,14 +84,14 @@ object Constants {
 
         questionsList.add(que2)
 
-        val que3 = Question(2,
+        val que3 = Question(3,
             "What is the main way to prevent SQL Injection attacks?",
             R.drawable.ic_sql_inject,
             "To filter and escape inputs on your website",
             "Parameterize queries with bound, typed parameters",
             "Turn off your computer",
             "Pray",
-            3
+            2
         )
 
         questionsList.add(que3)
