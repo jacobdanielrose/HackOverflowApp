@@ -10,8 +10,6 @@ import kotlinx.android.synthetic.main.activity_quiz_questions.*
 class InfoActivity : AppCompatActivity(), View.OnClickListener {
 
     private var mCurrentPosition:Int = 0
-    private var mhelpTitle:String? = null
-    private var mhelpContent:String? = null
     private var mInfohelpList:ArrayList<InfoHelp>? = null
     private var mCorrectAnswers: Int = 0
     private var mUserName: String? = null
@@ -44,7 +42,7 @@ class InfoActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
         if (v == btn_continue){
             when {
-                mCurrentPosition <= mInfohelpList!!.size -> {
+                mCurrentPosition < mInfohelpList!!.size -> {
                     val intent = Intent(this, QuizQuestionsActivity::class.java)
                     intent.putExtra(Constants.USER_NAME, mUserName)
                     intent.putExtra(Constants.CORRECT_ANSWERS, mCorrectAnswers)
@@ -58,7 +56,6 @@ class InfoActivity : AppCompatActivity(), View.OnClickListener {
                 intent.putExtra(Constants.USER_NAME, mUserName)
                 intent.putExtra(Constants.CORRECT_ANSWERS, mCorrectAnswers)
                 intent.putExtra(Constants.TOTAL_QUESTIONS, mInfohelpList!!.size)
-                // this forces the quiz question activity to proceed to next question
                 startActivity(intent)
                 finish()
                 }

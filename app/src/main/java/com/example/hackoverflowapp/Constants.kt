@@ -1,5 +1,7 @@
 package com.example.hackoverflowapp
 
+import java.net.URL
+
 object Constants {
 
     const val USER_NAME: String = "user_name"
@@ -11,21 +13,37 @@ object Constants {
         val infohelpList = ArrayList<InfoHelp>()
 
         val info1 = InfoHelp(1,
-        "Phishing attacks!",
+        "Phishing attacks",
         R.drawable.ic_phishing,
-        "hello"
+        "Phishing attacks are emails or text messages that attempt to " +
+                "imitate a well-known and respected company in an attempt to extract sensitive " +
+                "information from you. e.g. banking info, credit card numbers"
         )
 
         infohelpList.add(info1)
 
 
         val info2 = InfoHelp(2,
-            "Encryption!",
-            R.drawable.ic_phishing,
-            "hello"
+            "Encryption",
+            R.drawable.ic_pgp,
+            "Encryption will not actually prevent a hacker from extracting " +
+                    "data traveling across a network, if they have managed to gain access " +
+                    "however, all the data that the hacker obtains will be encrypted and therefore " +
+                    "useless unless they also happens to have the private key used in the encryption. " +
+                    "The data they obtain will just look a bunch of random junk like the message above."
         )
 
         infohelpList.add(info2)
+
+        val info3 = InfoHelp(2,
+            "SQL Injection",
+            R.drawable.ic_sql,
+            "SQL Injection is one of the most common cyberattacks in the world. Although it is relatively simple " +
+                    "to guard against, it is shockingly common how many big companies still manage to get hacked by this method. " +
+                    ""
+        )
+
+        infohelpList.add(info3)
 
         return infohelpList
     }
@@ -56,6 +74,18 @@ object Constants {
         )
 
         questionsList.add(que2)
+
+        val que3 = Question(2,
+            "What is the main way to prevent SQL Injection attacks?",
+            R.drawable.ic_sql_inject,
+            "To filter and escape inputs on your website",
+            "Parameterize queries with bound, typed parameters",
+            "Turn off your computer",
+            "Pray",
+            3
+        )
+
+        questionsList.add(que3)
 
         return questionsList
     }

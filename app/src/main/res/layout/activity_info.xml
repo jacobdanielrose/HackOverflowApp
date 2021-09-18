@@ -19,7 +19,9 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textColor="#363A43"
-            android:text="Phishing Attacks"/>
+            android:text="Phishing Attacks"
+            android:textSize="35sp"
+            />
 
         <ImageView
             android:id="@+id/iv_info"

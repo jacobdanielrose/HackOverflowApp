@@ -110,22 +110,22 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener{
                 }
                 else {
                     val question = mQuestionsList?.get(mCurrentPosition - 1)
-                    if (question!!.correctAnswer != mSelectedOptionPosition){
-                        answerView(mSelectedOptionPosition, R.drawable.wrong_option_border_bg)
+                    if (question!!.correctAnswer == mSelectedOptionPosition){
+                        answerView(question.correctAnswer, R.drawable.correct_option_border_bg)
+                        if (mCurrentPosition == mQuestionsList!!.size){
+                            btn_submit.text = "FINISH"
+                        } else {
+                            btn_submit.text = "GO TO NEXT QUESTION"
+                        }
+                     mCorrectAnswers++
+                    } else {
+//                        answerView(mSelectedOptionPosition, R.drawable.wrong_option_border_bg)
                         val intent = Intent(this, InfoActivity::class.java)
                         intent.putExtra(Constants.USER_NAME, mUserName)
                         intent.putExtra(Constants.CORRECT_ANSWERS, mCorrectAnswers)
                         intent.putExtra(Constants.CURRENT_QUESTION, mCurrentPosition)
                         startActivity(intent)
                         finish()
-                    }else {
-                        mCorrectAnswers++
-                    }
-                    answerView(question.correctAnswer, R.drawable.correct_option_border_bg)
-                    if (mCurrentPosition == mQuestionsList!!.size){
-                        btn_submit.text = "FINISH"
-                    } else {
-                        btn_submit.text = "GO TO NEXT QUESTION"
                     }
                     mSelectedOptionPosition = 0
                 }
