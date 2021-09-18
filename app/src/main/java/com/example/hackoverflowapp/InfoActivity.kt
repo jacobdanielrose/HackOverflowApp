@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import kotlinx.android.synthetic.main.activity_info.*
-import kotlinx.android.synthetic.main.activity_quiz_questions.*
 
 class InfoActivity : AppCompatActivity(), View.OnClickListener {
 

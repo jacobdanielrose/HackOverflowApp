@@ -56,7 +56,7 @@ object Constants {
 
         val info4 = InfoHelp(4,
             "2 Factor Authentication",
-            R.drawable.ic_sql,
+            R.drawable.ic_2FA_1,
             "2 Factor authentication would work in python by using the PyOTP library and a JS front end with a simple authentication app like " +
                     "google authenticator or duo mobile. 2FA drastically reduces the ability of someone to hack an account by brute force " +
                     "attacking the password or obtaining it in another data breach."
@@ -66,7 +66,7 @@ object Constants {
 
         val info5 = InfoHelp(5,
             "Proper Logging",
-            R.drawable.ic_sql,
+            R.drawable.ic_logs,
             "Another way to prevent data breaches, is by logging all log-ins, server queries, transfers, emails, etc. All of this can be " +
                     "logged on both ends and then compared at the end of the day. If the logs do not match up on both ends, " +
                     "it will be flagged as an unauthorized access, allowing you to lock out the given account and prevent further theft."
@@ -76,7 +76,7 @@ object Constants {
 
         val info6 = InfoHelp(6,
             "Proper Logging",
-            R.drawable.ic_sql,
+            R.drawable.ic_email,
             "A simple way to deal with email phishing and malware related attacks is to utilize, again the third party email providers IT tools for disabling links on " +
                     "all external emails preventing inadvertent execution of malware. Another interesting tool, would be to use machine learning (specifically a neural net) " +
                     "to do language recognition for the sending emails address. Often times, malicious emails are sent from randomly generated addresses, " +
