@@ -27,6 +27,7 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener{
         mCorrectAnswers = intent.getIntExtra(Constants.CORRECT_ANSWERS,0)
 
         mQuestionsList = Constants.getQuestions()
+        progressBar.max = mQuestionsList!!.size
         setQuestion()
 
         tv_option_one.setOnClickListener(this)
