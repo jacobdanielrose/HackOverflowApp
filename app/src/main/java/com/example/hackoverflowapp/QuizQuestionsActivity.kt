@@ -23,6 +23,7 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener{
         setContentView(R.layout.activity_quiz_questions)
 
         mUserName = intent.getStringExtra(Constants.USER_NAME)
+        mCurrentPosition = intent.getIntExtra(Constants.CURRENT_QUESTION, 1)
 
         mQuestionsList = Constants.getQuestions()
         setQuestion()
@@ -111,6 +112,12 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener{
                     val question = mQuestionsList?.get(mCurrentPosition - 1)
                     if (question!!.correctAnswer != mSelectedOptionPosition){
                         answerView(mSelectedOptionPosition, R.drawable.wrong_option_border_bg)
+                        val intent = Intent(this, InfoActivity::class.java)
+                        intent.putExtra(Constants.USER_NAME, mUserName)
+                        intent.putExtra(Constants.CORRECT_ANSWERS, mCorrectAnswers)
+                        intent.putExtra(Constants.CURRENT_QUESTION, mCurrentPosition)
+                        startActivity(intent)
+                        finish()
                     }else {
                         mCorrectAnswers++
                     }

@@ -9,16 +9,6 @@
     android:padding="20dp"
     tools:context=".ResultActivity">
 
-    <TextView
-        android:id="@+id/tv_result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Result"
-        android:layout_marginTop="25dp"
-        android:textColor="@android:color/white"
-        android:textSize="25sp"
-        android:textStyle="bold"/>
-
     <ImageView
         android:id="@+id/iv_trophy"
         android:layout_width="100dp"

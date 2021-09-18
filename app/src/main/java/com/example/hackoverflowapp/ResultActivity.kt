@@ -21,12 +21,11 @@ class ResultActivity : AppCompatActivity() {
         val correctAnswers = intent.getIntExtra(Constants.CORRECT_ANSWERS, 0)
         tv_score.text = "Your score is $correctAnswers out of $totalQuestions"
 
-        if (correctAnswers == 0) {
+        if (correctAnswers < 2) {
             tv_congratulations.text = " :( "
             iv_trophy.setImageResource(R.drawable.ic_hacked)
-            iv_trophy.layoutParams.height = 200
+            iv_trophy.layoutParams.height = 500
             iv_trophy.layoutParams.width =  ViewGroup.LayoutParams.MATCH_PARENT
-
         }
 
         btn_finish.setOnClickListener {
