@@ -56,7 +56,7 @@ object Constants {
 
         val info4 = InfoHelp(4,
             "2 Factor Authentication",
-            R.drawable.ic_2FA_1,
+            R.drawable.ic_twofactor,
             "2 Factor authentication would work in python by using the PyOTP library and a JS front end with a simple authentication app like " +
                     "google authenticator or duo mobile. 2FA drastically reduces the ability of someone to hack an account by brute force " +
                     "attacking the password or obtaining it in another data breach."
